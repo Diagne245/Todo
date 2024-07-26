@@ -1,0 +1,169 @@
+%button-shared {
+  border-radius: 50%;
+  border: none;
+  outline: none;
+
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+#group-page {
+  background-color: $group-bg-color;
+  overflow-x: hidden;
+
+  .page-container {
+    margin: auto;
+  }
+
+  .slide {
+    position: relative;
+    background-color: $dark-color;
+    height: fit-content;
+    margin: 1.5rem 1rem;
+    padding: 1rem 0;
+    box-shadow: 10px 10px 10px #333;
+
+    &:hover {
+      transform: scale(1.025);
+    }
+
+    .home-btn {
+      @extend %button-shared;
+      position: absolute;
+      top: calc(50% - 1.25rem);
+      left: -1.25rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      background-color: $group-color;
+      display: none;
+
+      &:hover {
+        background-color: darken($group-color, 7%);
+      }
+
+      .fa-house {
+        position: relative;
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.25rem;
+        color: #fff;
+      }
+    }
+
+    .delete-btn {
+      @extend %button-shared;
+      position: absolute;
+      top: -1.3rem;
+      right: -1.3rem;
+      width: 2.6rem;
+      height: 2.6rem;
+      background-color: $medium-color;
+      display: none;
+
+      .fa-trash-can {
+        position: relative;
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1rem;
+        color: $selection-color;
+
+        &:hover {
+          color: darken($delete-color, 7%);
+        }
+      }
+    }
+  }
+
+  // Slide title ------------------------
+  .slide-title {
+    @extend %title-shared;
+    cursor: pointer;
+  }
+
+  .title-input {
+    @extend %filter-input-shared;
+    @extend %title-shared;
+    width: 70%;
+    display: none;
+    padding-bottom: 0.1rem;
+
+    &:focus {
+      color: $group-color;
+    }
+    &:-webkit-autofill {
+      @extend %autofill-shared;
+    }
+    &:autofill {
+      @extend %autofill-shared;
+    }
+  }
+
+  // Icons
+  .fa-2x {
+    font-size: 1.3rem;
+  }
+
+  .items {
+    max-width: 96%;
+  }
+}
+
+.slide-form {
+  @extend %form-shared;
+
+  .form-input {
+    width: 80%;
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+}
+
+.add-item-btn {
+  background-color: lighten($dark-color, 5%);
+
+  &:hover {
+    background-color: lighten($dark-color, 2%);
+  }
+
+  &.update {
+    background-color: $update-color;
+    &:hover {
+      background-color: darken($update-color, 7%);
+    }
+  }
+
+  &.select-mode {
+    background-color: $selection-color;
+    &:hover {
+      background-color: darken($selection-color, 7%);
+    }
+  }
+}
+
+// Add New Slide Icon
+.add-slide {
+  width: fit-content;
+  margin: 0 auto;
+
+  .fa-plus {
+    display: block;
+    margin-top: 2rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: $group-color;
+
+    &:hover {
+      color: darken($group-color, 7%);
+    }
+  }
+}

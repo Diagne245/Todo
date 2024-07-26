@@ -1,0 +1,130 @@
+@media (max-width: 500px),
+  (max-width: 768px),
+  (orientation: landscape) and (max-height: 600px) {
+  body {
+    line-height: 1.2;
+  }
+
+  %media-filter-shared {
+    padding: 0.3rem 0.3rem 0;
+    margin: 0 auto;
+  }
+
+  %media-li-shared {
+    display: inline-block;
+    height: fit-content;
+    padding: 0.6rem 1.5rem;
+    margin-bottom: 0.25rem;
+    border-radius: 5px;
+  }
+
+  %media-btn-clear-shared {
+    width: fit-content;
+    margin: 0.25rem auto 0.5rem;
+    border-radius: 5px;
+    background-color: darken($selection-color, 7%);
+  }
+
+  #main-page,
+  #group-page {
+    .items {
+      li {
+        @extend %media-li-shared;
+
+        .item-btn {
+          visibility: hidden;
+        }
+
+        &.edit-mode,
+        &.delete-mode {
+          .item-btn {
+            visibility: visible;
+          }
+        }
+      }
+    }
+
+    .filter {
+      .filter-input {
+        @extend %media-filter-shared;
+      }
+    }
+
+    .btn-clear {
+      @extend %media-btn-clear-shared;
+    }
+  }
+
+  #main-page {
+    #item-form {
+      margin: 0 auto 0.5rem;
+    }
+
+    .line {
+      margin-bottom: 0.25rem;
+    }
+
+    // -------------------
+    #group-page {
+      .page-container {
+        font-size: 1rem;
+        padding: 0;
+      }
+
+      .slide-form {
+        margin-bottom: 0.5rem;
+
+        .input {
+          margin-bottom: 0.5rem;
+        }
+
+        .btn {
+          &:hover {
+            background-color: lighten($dark-color, 2%);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Input Width
+@media (max-width: 500px) {
+  #main-page {
+    .page-container {
+      .form-input {
+        min-width: 90vw;
+      }
+    }
+  }
+}
+
+// Landscape mode and tablet
+@media (orientation: landscape) and (max-height: 600px) {
+  #main-page {
+    .page-container {
+      height: fit-content !important;
+      min-height: 100vh;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .form-input {
+        max-width: 80vw;
+      }
+
+      #focus {
+        display: none;
+      }
+    }
+  }
+}
+
+#group-page {
+  .page-container {
+    .slide {
+      margin: 1.5rem;
+    }
+  }
+}
