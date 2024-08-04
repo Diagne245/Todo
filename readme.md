@@ -1,14 +1,15 @@
 # TODO App
 
+Demo:&ensp;**https://todo-app-x2kh.onrender.com/**
+
 This is a `Vanilla JavaScript` Todo app to store Ideas and Todos. It uses `Swiper UI Library` for the sliding system, `Webpack` modules bundler and `LocalStorage` to store data.
 
-We started with the *`Shopping List App`* from the [**Modern JS From The Beginning 2.0**](https://www.udemy.com/course/modern-javascript-from-the-beginning/?kw=modern+javascript+from+the+beg&src=sac&couponCode=LETSLEARNNOW) Traversy Media Udemy course(see link below).  
+We started with the _`Shopping List App`_ from the [Modern JS From The Beginning 2.0](https://www.udemy.com/course/modern-javascript-from-the-beginning/?kw=modern+javascript+from+the+beg&src=sac&couponCode=LETSLEARNNOW) `Traversy Media` Udemy course(see Demo link below).  
 https://legendary-lokum-bd58e5.netlify.app/
 <br>
 
 ![App Screenshot](/src/images/screenshot.png)
 
-Demo:&ensp;**https://todo-app-x2kh.onrender.com/**
 
 ## Functionalities
 
@@ -22,11 +23,12 @@ Demo:&ensp;**https://todo-app-x2kh.onrender.com/**
 
 ### How To
 
-1. Click on an item to enter **`Edit Mode`** and click it again to exit  
+1. Click on an item to enter **`Edit Mode`** and click it again to exit
 
 2. `Double Click` any item to enter `Select Mode`. You can then select items by clicking on them to either:
-    * `Move` them to another location by hitting the `Add Selection` button
-    *  `Delete` them by pressing the `Remove Items` button  
+
+   - `Move` them to another location by hitting the `Add Selection` button
+   - `Delete` them by pressing the `Remove Items` button
 
 3. To `Delete a Group`, you need to remove all his slides.
 
@@ -53,14 +55,15 @@ Visit `http://localhost:3000`
 ```bash
 npm run build
 ```
+
 Production files will go into the **`dist/`** folder
 
 ## Features To Add
 
-  - Move storage system from localStorage to a `database`  
+- Move storage system from localStorage to a `database`
 
-  - Turn the app into a `Fullstack CRUD App/Api`   
+- Turn the app into a `Fullstack CRUD App/Api`
 
-  - Add `Color Themes` 
+- Add `Color Themes`
 
-  - Add `About App Group` to have a `How To` section 
+- Add `About App Group` to have a `How To` section
